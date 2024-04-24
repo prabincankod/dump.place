@@ -8,10 +8,7 @@ export async function GET(
   { params }: { params: { username: string } },
 ) {
   const username = params.username.slice(1);
-
-  return new Response(JSON.stringify({ error: "User not found" }), {
-    status: 404,
-  });
+  
 
   // Generate a number between 1 and 100. if it's 1, revalidate the cache
   // for this path.
